@@ -1,12 +1,12 @@
 /*
-  Middle East - Night
+  Neslar - Dark
   Typora RTL theme
-  design: isapanah.com
-  date: 2019
-  version: 1.1
+  design: ARIAN ABDI
+  date: 2022
+  version: 1.0.0
 */
 
-@import url("./middle-east/code-dracula.css");
+@import url("./neslar/code-dracula.css");
 
 
 /** ROOT VARIABLES **/
@@ -19,6 +19,8 @@
 
   --neslar-blockquote-background: #22242b;
   --neslar-blockquote-border: #15161b;
+
+  --neslar-outline-text-color: #33a3ff;
 
   --bg-color: #1b1d23; /* change background */
   --text-color: #dddddd; /* change text color */
@@ -55,9 +57,11 @@
   --megamenu-item-hover-bg-color: var(--bg-color); /* background color for hovering megamenu items */
   --megamenu-item-hover-text-color: white; /* text color for hovering megamenu items */
 
-  --default-persian-font-family: 'dejavu';
-  --default-english-font-family: 'Roboto';
-  --default-code-font-family: '';
+  --default-persian-font-family: 'DejaVuSans';
+  --default-english-font-family: 'arial';
+  --default-persian-bold-font-family: 'DejaVuSansCondensed-Bold';
+  --default-english-bold-font-family: 'arial';
+  --default-code-font-family: "Cousine", monospace;
 }
 
 
@@ -65,23 +69,73 @@
   font-family: "dana";
   font-style: normal;
   font-weight: bold;
-  src: local("Dana Bold"), url("./middle-east/dana-bold.woff2") format("woff2");
+  src: local("Dana Bold"), url("./neslar/dana-bold.woff2") format("woff2");
   unicode-range: U+0600-06FF ;
 }
 
 @font-face {
-  font-family: "dejavu";
+  font-family: "DejaVuSans";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 100;
   src: local("dejavu"),
-    url("./neslar/DejaVuSans.ttf") format("truetype"),
-    url("./neslar/DejaVuSans-Bold.ttf") format("truetype"),
-    url("./neslar/DejaVuSans-BoldOblique.ttf") format("truetype"),
-    url("./neslar/DejaVuSansCondensed-Bold.ttf") format("truetype"),
-    url("./neslar/DejaVuSansCondensed-BoldOblique.ttf") format("truetype"),
-    url("./neslar/DejaVuSansCondensed-Oblique.ttf") format("truetype"),
-    url("./neslar/DejaVuSans-Oblique.ttf") format("truetype"),
-    url("./neslar/DejaVuSans-ExtraLight.ttf") format("truetype");
+  url("./neslar/DejaVuSans.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "DejaVuSans-Bold";
+  font-style: normal;
+  src: local("DejaVuSans-Bold"),
+  url("./neslar/DejaVuSans-Bold.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "DejaVuSansCondensed-Bold";
+  font-style: normal;
+  src: local("DejaVuSansCondensed-Bold"),
+  url("./neslar/DejaVuSansCondensed-Bold.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "DejaVuSansCondensed-Bold";
+  font-style: normal;
+  src: local("DejaVuSansCondensed-Bold"),
+  url("./neslar/DejaVuSansCondensed-Bold.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "DejaVuSansCondensed-BoldOblique";
+  font-style: normal;
+  src: local("DejaVuSansCondensed-BoldOblique"),
+  url("./neslar/DejaVuSansCondensed-BoldOblique.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "DejaVuSansCondensed-Oblique";
+  font-style: normal;
+  src: local("DejaVuSansCondensed-Oblique"),
+  url("./neslar/DejaVuSansCondensed-Oblique.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "DejaVuSans-Oblique";
+  font-style: normal;
+  src: local("DejaVuSans-Oblique"),
+  url("./neslar/DejaVuSans-Oblique.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+
+@font-face {
+  font-family: "DejaVuSans-ExtraLight";
+  font-style: normal;
+  src: local("DejaVuSans-ExtraLight"),
+  url("./neslar/DejaVuSans-ExtraLight.ttf") format("truetype");
   unicode-range: U+0600-06FF ;
 }
 
@@ -90,16 +144,90 @@
   font-style: normal;
   font-weight: bold;
   src: local("Roboto"),
-    url("./neslar/Roboto-Regular.ttf") format("truetype"),
-    url("./neslar/Roboto-Black.ttf") format("truetype"),
-    url("./neslar/Roboto-BlackItalic.ttf") format("truetype"),
-    url("./neslar/Roboto-Bold.ttf") format("truetype"),
-    url("./neslar/Roboto-Italic.ttf") format("truetype"),
-    url("./neslar/Roboto-Light.ttf") format("truetype"),
-    url("./neslar/Roboto-Medium.ttf") format("truetype"),
-    url("./neslar/Roboto-LightItalic.ttf") format("truetype"),
-    url("./neslar/Roboto-Thin.ttf") format("truetype"),
-    url("./neslar/Roboto-ThinItalic.ttf") format("truetype");
+  url("./neslar/Roboto-Regular.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "Roboto-Black";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Roboto-Black"),
+  url("./neslar/Roboto-Black.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "Roboto-BlackItalic";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Roboto-BlackItalic"),
+  url("./neslar/Roboto-BlackItalic.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Roboto-Bold"),
+  url("./neslar/Roboto-Bold.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+
+@font-face {
+  font-family: "Roboto-Italic";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Roboto-Italic"),
+  url("./neslar/Roboto-Italic.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Roboto-Light"),
+  url("./neslar/Roboto-Light.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Roboto-Medium"),
+  url("./neslar/Roboto-Medium.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "Roboto-LightItalic";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Roboto-LightItalic"),
+  url("./neslar/Roboto-LightItalic.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+  font-family: "Roboto-Thin";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Roboto-Thin"),
+  url("./neslar/Roboto-Thin.ttf") format("truetype");
+  unicode-range: U+0600-06FF ;
+}
+
+
+@font-face {
+  font-family: "Roboto-ThinItalic";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Roboto-ThinItalic"),
+  url("./neslar/Roboto-ThinItalic.ttf") format("truetype");
   unicode-range: U+0600-06FF ;
 }
 
@@ -108,7 +236,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("helvetica"),
-    url("./neslar/dHelveticaNeueLT55Roman.ttf") format("truetype");
+  url("./neslar/dHelveticaNeueLT55Roman.ttf") format("truetype");
   unicode-range: U+0600-06FF ;
 }
 
@@ -148,7 +276,16 @@
 }
 
 
+.outline-label {
+  font-weight: 100;
+}
+.outline-label:hover{
+  text-decoration: unset !important;
+}
 
+.outline-item:hover{
+  color: var(--neslar-outline-text-color);
+}
 
 .cm-s-inner.CodeMirror, .cm-s-inner .CodeMirror-gutters {
   background-color: #292a30 !important;
@@ -267,7 +404,7 @@ h6, p, a, del, mark, #write p, #write a, #write del, #write mark, #write ul, #wr
 
 }
 .outline-h2, .outline-h3, .outline-h4,
- .outline-h5, .outline-h6 {
+.outline-h5, .outline-h6 {
   margin-right: 25px !important;
 }
 
@@ -281,7 +418,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+  font-family: var(--default-english-bold-font-family) ,var(--default-persian-bold-font-family);
+  font-weight: 800;
 }
 
 h1 {
@@ -317,10 +455,14 @@ h6 {
 p {
   margin: 0.5rem 0;
 }
+p>.md-image:only-child:not(.md-img-error) img, p>img:only-child {
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
 
 a {
   color: var(--link-color);
-  font-family: 'Cousine';
+  font-family: var(--default-code-font-family);
   font-size: 0.95em;
 }
 
@@ -335,7 +477,7 @@ mark {
 
 /* Writing area -> line height */
 #write {
-	line-height: 1.6;
+  line-height: 1.6;
 }
 
 /* Custom list-style */
@@ -355,10 +497,10 @@ mark {
 
 #write ol > li,
 #write ul > li {
-    color: var(--primary-color);
-    padding-left: 0.25em;
-    line-height: 1.8em;
-    padding: 0px 25px;
+  color: var(--primary-color);
+  padding-left: 0.25em;
+  line-height: 1.8em;
+  padding: 0px 25px;
 }
 
 #write ol li > *,
@@ -451,17 +593,17 @@ blockquote p:not(:last-child):before {
 code,
 .md-fences,
 tt {
-  font-family: "Cousine", monospace;
+  font-family: var(--default-code-font-family);
   font-size: 1rem;
   direction: ltr;
 }
 
 code {
-    border-radius: 0.25rem;
-    padding: 0 0.115rem;
-    background-color: #43405b !important;
-    color: #f8f8f2 !important;
-    border: 1px solid #68639e !important;
+  border-radius: 0.25rem;
+  padding: 0 0.115rem;
+  background-color: var(--neslar-code-fences-background) !important;
+  color: #f8f8f2 !important;
+  border: 1px solid var(--neslar-code-fences-border) !important;
 }
 
 /* Code auto-suggest list menu */
@@ -680,8 +822,8 @@ span.md-def-split {
 
 .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) img,
 .on-focus-mode
-  blockquote
-  .md-end-block:not(.md-focus):not(.md-focus-container)::before,
+blockquote
+.md-end-block:not(.md-focus):not(.md-focus-container)::before,
 .on-focus-mode li:not(.md-focus-container)::before {
   opacity: 0.5;
 }

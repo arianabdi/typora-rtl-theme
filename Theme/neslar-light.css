@@ -1,74 +1,441 @@
 /*
-  Middle East - Day
+  Neslar - Light
   Typora RTL theme
-  design: isapanah.com
-  date: 2019
-  version: 1.1
+  design: ARIAN ABDI
+  date: 2022
+  version: 1.0.0
 */
 
-@import url("./middle-east-night.css");
-@import url("./middle-east/code-3024-day.css");
+@import url("./neslar-dark.css");
+@import url("./neslar/code-3024-day.css");
+
+
+
 
 /** ROOT VARIABLES **/
+
 :root {
-  --bg-color: #fbfbfb; /* change background */
-  --text-color: #333333; /* change text color */
-  --md-char-color: #b4b4b4; /* change color of meta characetrs like `*` in markdown */
-  --meta-content-color: #757575; /* change color of meta contents like image text or link address in markdown */
-  --link-color: #db4d52; /* change color of hyperlinks */
+    --neslar-blue-background: #0454fb;
 
-  --primary-color: #db4d52; /* primary color */
-  --primary-btn-border-color: #be2f34; /* primary color for buttons */
-  --primary-btn-text-color: #000; /* primary text color for buttons */
-  --accent-color: #d0d0d0; /* background accent color */
+    --neslar-code-fences-background: #aac1f3;
+    --neslar-code-fences-border: #719af1;
 
-  --window-border: 1px solid #16161a; /* border for sidebar, etc */
+    --neslar-blockquote-background: #e9ecf3;
+    --neslar-blockquote-border: #bfc4dc;
 
-  --active-file-bg-color: #16161a; /* background color if list item in file tree or file list */
-  --active-file-text-color: inherit; /* text color for selected file */
-  --active-file-border-color: #777; /* border color for selected file */
-  --active-search-item-bg-color: #23242b; /* background color for active search item */
+    --neslar-outline-text-color: #33a3ff;
 
-  --side-bar-bg-color: #2e3235; /* change background of sidebar*/
-  --item-hover-bg-color: #202020; /* background of control items when hover, like menu in sidebar*/
-  --item-hover-text-color: white; /* text color upon hovering over menu items */
-  --search-hit-bg-color: #db4d5230;
-  --search-select-text-color: var(--text-color); /* Text color for selected searched text */
-  --search-select-bg-color: #db4d5270; /* Background color for selected searched text */
-  --rawblock-edit-panel-bd: var(--accent-color); /* Background color for inline HTML "edit panel" blocks */
-  --monospace: "Cousine"; /* monospace font for codes, fences */
+    --bg-color: #fbfbfb; /* change background */
+    --text-color: #333333; /* change text color */
+    --md-char-color: #b4b4b4; /* change color of meta characetrs like `*` in markdown */
+    --meta-content-color: #757575; /* change color of meta contents like image text or link address in markdown */
+    --link-color: #db4d52; /* change color of hyperlinks */
 
-  --megamenu-bg-color: var(--bg-color); /* background color for unibody megamenu */
-  --megamenu-sidebar-bg-color: var(--side-bar-bg-color); /* background color for megamenu sidebar */
-  --megamenu-sidebar-hover-bg-color: #161819; /* background color for hovering megamenu sidebar items */
-  --megamenu-sidebar-active-bg-color: #101010; /* background color for active megamenu sidebar items */
-  --megamenu-button-border-color: #9292928f; /* background color for megamenu buttons */
-  --megamenu-item-hover-bg-color: #e6e6e6; /* background color for hovering megamenu items */
-  --megamenu-item-hover-text-color: #222222; /* text color for hovering megamenu items */
+    --primary-color: #db4d52; /* primary color */
+    --primary-btn-border-color: #be2f34; /* primary color for buttons */
+    --primary-btn-text-color: #000; /* primary text color for buttons */
+    --accent-color: #d0d0d0; /* background accent color */
+
+    --window-border: 1px solid #16161a; /* border for sidebar, etc */
+
+    --active-file-bg-color: #16161a; /* background color if list item in file tree or file list */
+    --active-file-text-color: inherit; /* text color for selected file */
+    --active-file-border-color: #777; /* border color for selected file */
+    --active-search-item-bg-color: #23242b; /* background color for active search item */
+
+    --side-bar-bg-color: #2e3235; /* change background of sidebar*/
+    --item-hover-bg-color: #202020; /* background of control items when hover, like menu in sidebar*/
+    --item-hover-text-color: white; /* text color upon hovering over menu items */
+    --search-hit-bg-color: #db4d5230;
+    --search-select-text-color: var(--text-color); /* Text color for selected searched text */
+    --search-select-bg-color: #db4d5270; /* Background color for selected searched text */
+    --rawblock-edit-panel-bd: var(--accent-color); /* Background color for inline HTML "edit panel" blocks */
+    --monospace: "Cousine"; /* monospace font for codes, fences */
+
+    --megamenu-bg-color: var(--bg-color); /* background color for unibody megamenu */
+    --megamenu-sidebar-bg-color: var(--side-bar-bg-color); /* background color for megamenu sidebar */
+    --megamenu-sidebar-hover-bg-color: #161819; /* background color for hovering megamenu sidebar items */
+    --megamenu-sidebar-active-bg-color: #101010; /* background color for active megamenu sidebar items */
+    --megamenu-button-border-color: #9292928f; /* background color for megamenu buttons */
+    --megamenu-item-hover-bg-color: #e6e6e6; /* background color for hovering megamenu items */
+    --megamenu-item-hover-text-color: #222222; /* text color for hovering megamenu items */
+
+    --default-persian-font-family: 'DejaVuSans';
+    --default-english-font-family: 'arial';
+    --default-persian-bold-font-family: 'DejaVuSansCondensed-Bold';
+    --default-english-bold-font-family: 'arial';
+    --default-code-font-family: "Cousine", monospace;
 }
+
+
+
+@font-face {
+    font-family: "dana";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Dana Bold"), url("./neslar/dana-bold.woff2") format("woff2");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "DejaVuSans";
+    font-style: normal;
+    font-weight: 100;
+    src: local("dejavu"),
+    url("./neslar/DejaVuSans.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "DejaVuSans-Bold";
+    font-style: normal;
+    src: local("DejaVuSans-Bold"),
+    url("./neslar/DejaVuSans-Bold.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "DejaVuSansCondensed-Bold";
+    font-style: normal;
+    src: local("DejaVuSansCondensed-Bold"),
+    url("./neslar/DejaVuSansCondensed-Bold.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "DejaVuSansCondensed-Bold";
+    font-style: normal;
+    src: local("DejaVuSansCondensed-Bold"),
+    url("./neslar/DejaVuSansCondensed-Bold.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "DejaVuSansCondensed-BoldOblique";
+    font-style: normal;
+    src: local("DejaVuSansCondensed-BoldOblique"),
+    url("./neslar/DejaVuSansCondensed-BoldOblique.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "DejaVuSansCondensed-Oblique";
+    font-style: normal;
+    src: local("DejaVuSansCondensed-Oblique"),
+    url("./neslar/DejaVuSansCondensed-Oblique.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "DejaVuSans-Oblique";
+    font-style: normal;
+    src: local("DejaVuSans-Oblique"),
+    url("./neslar/DejaVuSans-Oblique.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+
+@font-face {
+    font-family: "DejaVuSans-ExtraLight";
+    font-style: normal;
+    src: local("DejaVuSans-ExtraLight"),
+    url("./neslar/DejaVuSans-ExtraLight.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto"),
+    url("./neslar/Roboto-Regular.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Roboto-Black";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-Black"),
+    url("./neslar/Roboto-Black.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Roboto-BlackItalic";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-BlackItalic"),
+    url("./neslar/Roboto-BlackItalic.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-Bold"),
+    url("./neslar/Roboto-Bold.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+
+@font-face {
+    font-family: "Roboto-Italic";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-Italic"),
+    url("./neslar/Roboto-Italic.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-Light"),
+    url("./neslar/Roboto-Light.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-Medium"),
+    url("./neslar/Roboto-Medium.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Roboto-LightItalic";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-LightItalic"),
+    url("./neslar/Roboto-LightItalic.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Roboto-Thin";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-Thin"),
+    url("./neslar/Roboto-Thin.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+
+@font-face {
+    font-family: "Roboto-ThinItalic";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-ThinItalic"),
+    url("./neslar/Roboto-ThinItalic.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "helvetica";
+    font-style: normal;
+    font-weight: normal;
+    src: local("helvetica"),
+    url("./neslar/dHelveticaNeueLT55Roman.ttf") format("truetype");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "dana";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Dana Regular"), url("./neslar/dana-regular.woff2") format("woff2");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Vazir Regular"), url("./neslar/Vazir.woff") format("woff");
+    unicode-range: U+0600-06FF ;
+}
+
+@font-face {
+    font-family: "Vazir-Bold";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Vazir Bold"), url("./neslar/Vazir-Bold.woff") format("woff");
+    unicode-range: U+0600-06FF ;
+}
+
+/*
+	Cousine provided by Steve Matteson from Google Fonts
+	Downloaded from `https://fonts.google.com/specimen/Cousine`
+*/
+@font-face {
+    font-family: "Cousine";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Cousine Regular"), url("./neslar/Cousine-Regular.woff") format("woff");
+}
+
+html,
+body {
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+}
+
+.outline-label {
+    font-weight: 100;
+}
+.outline-label:hover{
+    text-decoration: unset !important;
+}
+.outline-item:hover{
+    color: var(--neslar-outline-text-color);
+}
+
+a {
+    color: var(--link-color);
+    font-family: var(--default-code-font-family);
+    font-size: 0.95em;
+}
+
+blockquote {
+    margin: 1rem 0rem 1rem 0;
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+    padding: 0px 28px;
+    border-radius: 2px;
+    background: var(--neslar-blockquote-background);
+    overflow: hidden;
+    border: 1px solid var(--neslar-blockquote-border);
+}
+
+span.md-toc-h1 {
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+    font-size: 1.3rem;
+}
+
+sup.md-footnote {
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+    font-size: 0.8rem;
+    padding: 0 4px;
+}
+
+.sidebar-tabs {
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+    border-bottom: 1px solid black;
+}
+
+.file-list-item-file-name {
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+    font-size: 1.2rem;
+}
+
+.file-list-item-summary,
+.ty-search-item-line {
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+}
+
+
+#outline-content .outline-h1 > .outline-item {
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+}
+
+#outline-content .outline-h1 > .outline-item {
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+}
+
+.outline-title-wrapper,
+.outline-item-wrapper.outline-h1 > .outline-item {
+    font-family: var(--default-english-font-family) ,var(--default-persian-font-family), "Lato";
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--default-english-bold-font-family) ,var(--default-persian-bold-font-family);
+    font-weight: 800;
+}
+
+code {
+    border-radius: 0.25rem;
+    padding: 0 0.115rem;
+    background-color: var(--neslar-code-fences-background) !important;
+    color: #f8f8f2 !important;
+    border: 1px solid var(--neslar-code-fences-border) !important;
+}
+
+.outline-item:hover{
+    color: var(--neslar-outline-text-color);
+}
+
+.cm-s-inner.CodeMirror, .cm-s-inner .CodeMirror-gutters {
+    background: #f7f7f7 !important;
+    direction: ltr;
+    color: #131212 !important;
+}
+
+
+blockquote p::before {
+    content: "";
+    position: absolute;
+    right: -2rem;
+    height: 100%;
+    width: 0.25rem;
+    background: #5f78ff;
+}
+
+code {
+    border-radius: 0.25rem;
+    padding: 0 0.115rem;
+    background-color: var(--neslar-code-fences-background) !important;
+    color: #000000 !important;
+    border: 1px solid var(--neslar-code-fences-border)  !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /** TAGS **/
 
 mark {
-  background: #adfe96;
+    background: #adfe96;
 }
 
 code {
-  background: #f7f7f7;
+    background: #f7f7f7;
 }
 
 /* Tables */
 thead {
-  background: #d0d0d0;
+    background: #d0d0d0;
 }
 
 table tr:nth-child(2n) {
-  background: #e6e6e6;
+    background: #e6e6e6;
 }
 
 /* Footnote */
 sup.md-footnote {
-  background: #dddddd;
+    background: #dddddd;
 }
 
 #file-library-search-input {
@@ -97,5 +464,12 @@ sup.md-footnote {
 
 /* Windows Unibody sidebar */
 #megamenu-menu-sidebar, .megamenu-menu-list li:not(.saved) a:not(.active):hover, .megamenu-menu-list li a.active {
-  color: var(--bg-color) !important;
+    color: var(--bg-color) !important;
+}
+
+#write ol > li, #write ul > li {
+    color: var(--neslar-blue-background);
+    padding-left: 0.25em;
+    line-height: 1.8em;
+    padding: 0px 25px;
 }
