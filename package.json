@@ -1,0 +1,39 @@
+{
+  "name": "neslar-rtl-theme-for-typora",
+  "version": "1.0.0",
+  "description": "neslar-dark and neslar-light for persian people to use typora using good reaction",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arianabdi/neslar-rtl-theme-for-typora.git"
+  },
+  "keywords": [
+    "typora",
+    "md",
+    "markdown",
+    "persian",
+    "rtl",
+    "arabic",
+    "neslar",
+    "farsi",
+    "dark",
+    "light",
+    "gitbook",
+    "bywork",
+    "ulysses",
+    "macdown",
+    "caret",
+    "ghostwrite",
+    "remarkable",
+    "haroopad"
+  ],
+  "author": "Arian abdi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arianabdi/neslar-rtl-theme-for-typora/issues"
+  },
+  "homepage": "https://github.com/arianabdi/neslar-rtl-theme-for-typora#readme"
+}
