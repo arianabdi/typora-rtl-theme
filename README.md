@@ -21,7 +21,7 @@ return "<p " + p(this) + " class='md-end-block md-p'>" + f(this) + "</p>";
 
 و به شکل زیر تغییر بدهید.
 ````
-return "<p " + p(this) + " dir="auto" class='md-end-block md-p'>" + f(this) + "</p>";
+return "<p " + p(this) + " dir='auto' class='md-end-block md-p'>" + f(this) + "</p>";
 ````
 
 
