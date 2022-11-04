@@ -1,4 +1,4 @@
-# neslar-rtl-theme-for-typora
+# Typora RTL Theme
 
 # برای رفع اشکال راست و چپ شدن در لینوکس و ویندوز و مک راه کار زیر رو میریم.
 
