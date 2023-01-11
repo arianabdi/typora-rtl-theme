@@ -55,7 +55,7 @@ return "<h" + this.get("depth") + p(this) + "class='md-end-block md-heading' dir
 در صورتی که واژه فارسی بود آن لیست به کل  `RTL`  و `text-align=right` میشود و در صورتی که انگلیسی بود `LTR` و `text-align=left` میشود
 
 ```js
-function modifyDDOMNode(e){
+function modifyDOMNode(e){
   var arabic = /[\u0600-\u06FF]/;
 
 
